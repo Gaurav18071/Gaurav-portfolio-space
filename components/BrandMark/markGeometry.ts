@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------------
-   The LH orbital monogram: bold geometric L and H with a tilted ring
+   The GM orbital monogram: bold geometric G and M with a tilted ring
    round them and a moon on it. Depth, front to back: the ring's near
    half (cutting a gap where it crosses the letters: diagonally through
-   the L's foot and across the H), the letters, the ring's far half. So
+   the G's foot and across the M), the letters, the ring's far half. So
    the ring passes in front of the letters low down and behind them at
    the top, and the moon slips behind them as it comes round.
    One geometry for every use: the live header mark (BrandMark.tsx), the
@@ -50,40 +50,58 @@ export function moonPoint(angle: number) {
 type Bar = readonly [x: number, y: number, width: number, height: number];
 
 /** The letters as rounded bars, each letter drawn as one shape */
-export const letterL: readonly Bar[] = [
+export const letterG: readonly Bar[] = [
   [14, 12, 7.5, 30],
-  [14, 34.5, 18, 7.5],
+  [14, 12, 19, 7.5],
+  [14, 34.5, 19, 7.5],
+  [25.5, 24, 7.5, 18],
+  [23.5, 24, 9.5, 7],
 ];
-export const letterH: readonly Bar[] = [
-  [36.5, 12, 7.5, 30],
-  [50.5, 12, 7.5, 30],
-  [43, 23.25, 8, 7],
+export const letterM: readonly Bar[] = [
+  [36.5, 12, 7, 30],
+  [51.5, 12, 7, 30],
 ];
+/** Diagonal chevron for letter M */
+export const pathM = 'M 40 15.25 L 47.5 28.5 L 55 15.25';
+
+/** Aliases for backward compatibility */
+export const letterL = letterG;
+export const letterH = letterM;
 export const barRadius = 1.8;
 
 /** Each letter's outline (SVG units, clockwise), for the 3D mark's extrusion */
-export const outlineL: readonly (readonly [number, number])[] = [
+export const outlineG: readonly (readonly [number, number])[] = [
   [14, 12],
-  [21.5, 12],
+  [33, 12],
+  [33, 19.5],
+  [21.5, 19.5],
   [21.5, 34.5],
-  [32, 34.5],
-  [32, 42],
+  [25.5, 34.5],
+  [25.5, 31],
+  [23.5, 31],
+  [23.5, 24],
+  [33, 24],
+  [33, 42],
   [14, 42],
 ];
-export const outlineH: readonly (readonly [number, number])[] = [
+export const outlineM: readonly (readonly [number, number])[] = [
   [36.5, 12],
-  [44, 12],
-  [44, 23.25],
-  [50.5, 23.25],
-  [50.5, 12],
-  [58, 12],
-  [58, 42],
-  [50.5, 42],
-  [50.5, 30.25],
-  [44, 30.25],
-  [44, 42],
+  [43.5, 12],
+  [47.5, 23.5],
+  [51.5, 12],
+  [58.5, 12],
+  [58.5, 42],
+  [51.5, 42],
+  [51.5, 26],
+  [47.5, 30],
+  [43.5, 26],
+  [43.5, 42],
   [36.5, 42],
 ];
+
+/** Aliases for backward compatibility */
+export const outlineL = outlineG;
+export const outlineH = outlineM;
 /** The letters' centre (the 3D mark's origin) */
 export const lettersCentre = { x: 36, y: 27 } as const;
 /** Ring and cut widths: the cut is the gap the near half leaves in the H */
@@ -180,7 +198,10 @@ export function brandMarkSvg({
     ${small ? '' : `<path d="${backArc}" fill="none" class="r" stroke="${colors.ring}" stroke-opacity="0.45" stroke-width="1.8"/>`}
     ${behind ? moonDot : ''}
   </g>
-  <g fill="url(#lh-letters)" mask="url(#lh-cut)">${bars(letterL)}${bars(letterH)}</g>
+  <g fill="url(#lh-letters)" mask="url(#lh-cut)">
+    ${bars(letterG)}${bars(letterM)}
+    <path d="${pathM}" fill="none" stroke="url(#lh-letters)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
   <g transform="${tiltTransform}">
     <path d="${frontArc}" fill="none" stroke="url(#lh-ring)" stroke-width="${ringStroke}" stroke-linecap="round"/>
     ${behind ? '' : moonDot}

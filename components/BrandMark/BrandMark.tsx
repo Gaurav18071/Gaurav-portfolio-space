@@ -10,13 +10,14 @@ import {
   barRadius,
   cutWidth,
   frontArc,
-  letterH,
-  letterL,
+  letterG,
+  letterM,
   markBounds,
   markHeight,
   markWidth,
   moonPoint,
   orbitPath,
+  pathM,
   ring,
   ringWidth,
   stationSlots,
@@ -212,8 +213,16 @@ export function BrandMark({
         </g>
       </g>
       <g fill={`url(#${id}-letters)`} mask={`url(#${id}-cut)`}>
-        <Bars letter={letterL} />
-        <Bars letter={letterH} />
+        <Bars letter={letterG} />
+        <Bars letter={letterM} />
+        <path
+          d={pathM}
+          fill="none"
+          stroke={`url(#${id}-letters)`}
+          strokeWidth="6.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </g>
       <g transform={tilt}>
         <path

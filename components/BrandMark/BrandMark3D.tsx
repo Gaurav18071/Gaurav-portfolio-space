@@ -20,7 +20,7 @@ import {
 } from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 
-import { lettersCentre, outlineH, outlineL, ring } from './markGeometry';
+import { lettersCentre, outlineG, outlineM, ring } from './markGeometry';
 import { createMarkMotion } from './markMotion';
 
 import type { BufferGeometry, Scene, Texture, WebGLRenderer } from 'three';
@@ -173,8 +173,8 @@ function buildAssets(theme: Theme) {
     });
   return {
     glowMap,
-    letterL: letterGeometry(outlineL, theme),
-    letterH: letterGeometry(outlineH, theme),
+    letterG: letterGeometry(outlineG, theme),
+    letterM: letterGeometry(outlineM, theme),
     // Cyan at the ring's left end to violet at its right, as the SVG
     ring: paint(
       new TorusGeometry(ring.rx, 0.95, 16, 220),
@@ -204,7 +204,7 @@ type Assets = ReturnType<typeof buildAssets>;
 
 function disposeAssets(assets: Assets) {
   assets.glowMap.dispose();
-  for (const geometry of [assets.letterL, assets.letterH, assets.ring, assets.notch]) {
+  for (const geometry of [assets.letterG, assets.letterM, assets.ring, assets.notch]) {
     geometry.dispose();
   }
   for (const material of [
@@ -302,8 +302,8 @@ function Mark({
 
   return (
     <group ref={swayRef}>
-      <mesh geometry={assets.letterL} material={assets.letters} />
-      <mesh geometry={assets.letterH} material={assets.letters} />
+      <mesh geometry={assets.letterG} material={assets.letters} />
+      <mesh geometry={assets.letterM} material={assets.letters} />
       <group position={[0, ringCentreY, 0]} rotation={[0, 0, tilt]}>
         <group rotation={[-inclination, 0, 0]}>
           <mesh geometry={assets.ring} material={assets.ringMaterial} />

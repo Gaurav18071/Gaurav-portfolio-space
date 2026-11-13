@@ -1,0 +1,55 @@
+# Gaurav Mishra: Full Stack Developer & SDE Intern
+
+> Final-year Computer Science Engineering student based in New Delhi, India. Building end-to-end full-stack applications with React, Next.js, Spring Boot, PostgreSQL and LLM APIs. Open to SDE internships and full-time roles in India or remote.
+
+## About
+
+Gaurav Mishra is a final-year CS Engineering student and full stack developer based in New Delhi, India. He builds and ships complete web applications from database schema to deployed UI, using Java/Spring Boot on the backend and React/Next.js on the frontend. He has integrated LLM APIs (ChatGPT, Claude, Gemini) into production features, containerised services with Docker, and secured applications with JWT authentication. He is currently seeking SDE internship and full-time opportunities.
+
+## Contact
+
+- **Email:** gauravmishra.dev.27@gmail.com
+- **Phone:** +91 97170 67268
+- **LinkedIn:** https://www.linkedin.com/in/gaurav-mishra-5579a330
+- **GitHub:** https://github.com/Gaurav18071
+- **Portfolio:** https://gauravmishra.dev
+
+## Experience
+
+### Ministry of Panchayati Raj, Government of India: Data & AI Intern
+*Sep 2026 - Present*
+ChatGPT, Claude, Gemini, LLM APIs, Python, Data Management, AI Integration, Government Portal, Dataset Organization
+
+### Atldo Tech: Frontend Developer Intern
+*Jul 2026 - Aug 2026*
+React, JavaScript, CSS, Git, HTML5, Responsive Design, Cross-browser Testing, Sprint Workflow, Code Review
+
+### Brainwave Matrix Solutions: Web Developer Intern
+*Sep 2024 - Nov 2024*
+HTML5, CSS3, JavaScript, React, UI Components, Cross-browser Debugging, Chrome DevTools, Firefox, Safari Testing
+
+## Projects
+
+### Flapboard - AI-Powered Adaptive Typing Platform (2026)
+AI-powered adaptive typing platform that tracks real-time WPM and accuracy, provides a performance dashboard, and generates targeted drills from past weaknesses. Built a Spring Boot REST API with JWT authentication and PostgreSQL for user accounts, typing sessions, and progress history; containerised the backend with Docker. Integrated a live LLM API that structures performance metrics into personalised coaching.
+Technologies: Spring Boot, Java, Next.js, React, TypeScript, PostgreSQL, Docker, JWT
+URL: https://typing-master-pied.vercel.app
+
+### Golf Cart - Full-Stack Fundraising Platform (2026)
+Role-based full-stack fundraising platform built with Next.js, TypeScript, Supabase, PostgreSQL (Neon), Prisma, Razorpay, and Zod. Implemented organisation registration with document upload and admin verification workflow, plus campaign management and donation tracking. Added AI-assisted campaign writing and search with Zod-validated structured outputs.
+Technologies: Next.js, TypeScript, Supabase, PostgreSQL, Prisma, Razorpay, Zod
+
+### HireTrack - Recruitment Management Platform / ATS (2026)
+Applicant Tracking System built with Next.js, TypeScript, Prisma, PostgreSQL, Auth.js, bcrypt, and shadcn/ui. Credentials-based authentication with bcrypt password hashing and protected dashboard routes. Per-application hiring stages: Applied, Screening, Interview, Offer, Hired/Rejected.
+Technologies: Next.js, TypeScript, Prisma, PostgreSQL, Auth.js, shadcn/ui
+URL: https://github.com/Gaurav18071/Hiretrack-ai
+
+## Skills
+
+- **Frontend:** React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
+- **Backend:** Java, Spring Boot, Node.js, REST API, JWT Authentication
+- **Databases:** PostgreSQL, MongoDB, Prisma ORM, Supabase, Neon
+- **AI & LLMs:** ChatGPT API, Claude API, Gemini API, LLM integration, Python
+- **DevOps & Cloud:** Docker, Vercel, AWS (basics), Git, GitHub
+- **Testing & Tools:** DSA (LeetCode, NeetCode 80+ problems), Chrome DevTools, Postman
+- **UI Libraries:** shadcn/ui, Tailwind CSS, CSS Modules
